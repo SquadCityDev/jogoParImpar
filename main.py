@@ -1,9 +1,9 @@
 import random
 
 def par_impar():
-    print("_" * 40)
+    print("=" * 40)
     print(" Bem-vindo ao Jogo Par ou ímpar")
-    print("_" * 40)
+    print("=" * 40)
 
     vitorias_usuario = 0
     vitorias_ia = 0
@@ -26,9 +26,10 @@ def par_impar():
            numero_usuario=int(input("Digite um número inteiro"))
         except ValueError:
            print("Por apenas numeros inteiros")
+           continue
 
         # A IA escolhe o numero
-        numero_ia = random.randint(0,10)
+        numero_ia = random.randint(0, 10)
 
         soma = numero_usuario + numero_ia
         resultado = "P" if soma % 2 == 0 else "I"
@@ -36,7 +37,7 @@ def par_impar():
         # Linha divisória
         print("_" * 40)
         print(f"Você jogou {numero_usuario} e a IA jogu {numero_ia}")
-        print(f"A soma foi {soma} ({"PAR" if resultado =="P" else "IMPAR"}).")
+        print(f"A soma foi {soma} ({"PAR" if resultado =="P" else "ÍMPAR"}).")
 
         if escolha_usuario == resultado:
             print("Parabéns! Você ganhou está rodada")
@@ -48,11 +49,11 @@ def par_impar():
 
         print("\n" + "=" * 40)
         print("Fim de jogo placar Final:")
-        print(f"\Você: {vitorias_usuario} Vitórias")
+        print(f"Você: {vitorias_usuario} Vitórias")
         print(f"IA: {vitorias_ia} vitórias")
         print("Obrigado por Jogar")
-        print("="* 40)
+        print("=" * 40)
 
-    if __name__ =="_main_":
-       par_impar()
+if __name__ =="__main__":
+    par_impar()
 
